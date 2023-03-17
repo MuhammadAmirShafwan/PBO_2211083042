@@ -10,32 +10,29 @@ package AMIR_160323;
  * @author LABP1KOMP
  */
 import java.io.BufferedReader;
-import javax.swing.JOptionPane;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class NomorTerbesar_BufferedReader {
-    public static int parseInt(String name){
-        return x;
-    }
     public static void main( String[] args ){ 
-        String name = ""; 
-        int []x = new int[100];
-        // a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j =0;
-        name = JOptionPane.showInputDialog("number 1");
-        name = JOptionPane.showInputDialog("number 2");
-        name = JOptionPane.showInputDialog("number 3");
-        name = JOptionPane.showInputDialog("number 4");
-        name = JOptionPane.showInputDialog("number 5");
-        name = JOptionPane.showInputDialog("number 6");
-        name = JOptionPane.showInputDialog("number 7");
-        name = JOptionPane.showInputDialog("number 8");
-        name = JOptionPane.showInputDialog("number 9");
-        name = JOptionPane.showInputDialog("number 10");
-        
-        int i=Integer.parseInt(name);  
-        System.out.println(i);  
+        BufferedReader dataIn = new BufferedReader(new InputStreamReader(System.in));
+        int[] a = new int[11];
+        int terbesar = 0;
+        for(int i=1;i+1<=a.length;i++){
+            try {
+                System.out.print("nomor "+i+" : ");
+                a[i] = Integer.parseInt(dataIn.readLine());
+                if(terbesar>a[i]){
+                      terbesar=terbesar;
+                }
+                else{
+                    terbesar = a[i];
+                }
+            }
+            catch (IOException e) {
+                System.out.println("Error!");
+            }
         }
-        String msg = "Hello " + name + "!"; 
-        JOptionPane.showMessageDialog(null, msg); 
-
-    } 
-} 
+        System.out.println("Nomor terbesar adalah "+terbesar);
+    }
+}  

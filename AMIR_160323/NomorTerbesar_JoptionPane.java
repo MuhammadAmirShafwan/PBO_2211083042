@@ -15,27 +15,15 @@ public class NomorTerbesar_JoptionPane {
         int terbesar = 0;
         for(int i=1;i+1<=a.length;i++)
         {
-            System.out.print("."); //menampilkan array ke
+            System.out.print(i+") "); //menampilkan array ke
             n[i] = JOptionPane.showInputDialog("Masukkan angka ke-"+i+" :");
             a[i] = Integer.parseInt(n[i]);
-            if(terbesar>a[i])
-            {
-                if(terbesar>a[i])
-                {
+            if(terbesar>a[i]){
                 terbesar=terbesar;
-                System.out.println(terbesar); //menampilkan terbesar dicommandline
-                }
+                System.out.println(a[i]); //menampilkan terbesar dicommandline
             }
-            else
-            {
-                if(a[i]>a[i-1])
-                {
+            else{
                 terbesar=a[i];
-                }
-                else
-                {
-                terbesar=a[i-1];
-                }
                 System.out.println(terbesar); //menampilkan terbesar di commandline
             }
         }
