@@ -6,7 +6,7 @@ package AMIR_160323;
 import javax.swing.*;
 /**
  *
- * @author maita
+ * @author LABP1KOMP
  */
 public class NomorTerbesar_JoptionPane {
     public static void main(String [] args){
